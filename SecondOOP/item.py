@@ -1,17 +1,15 @@
 from product import Product
 
-product_name = str(input("Product Name: "))
-product_price = int(input("Price: "))
-quantity = int(input("Quantity: "))
-
 class Phone(Product):
+    payment_rate = 0.6
     def __init__(self, name, price):
         super().__init__(name, price)
 
     def calculate_price(self, quantity=0):
         return self.price * quantity
 
-phone = Phone(product_name, product_price)
+phone1 = Phone("iPhone", 300)
+phone2 = Phone("Samsung", 200)
 
-print(phone)
-print(phone.calculate_price(quantity))
+print(phone1.payment_rate)
+print(phone2.payment_rate)
