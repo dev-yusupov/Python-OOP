@@ -5,11 +5,10 @@ class Phone(Product):
     def __init__(self, name, price):
         super().__init__(name, price)
 
-    def calculate_price(self, quantity=0):
+    def calculate_price(self, quantity):
         return self.price * quantity
 
 phone1 = Phone("iPhone", 300)
 phone2 = Phone("Samsung", 200)
 
-print(phone1.payment_rate)
-print(phone2.payment_rate)
+print(phone1.calculate_price(5))
